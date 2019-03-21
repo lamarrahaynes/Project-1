@@ -62,7 +62,7 @@
           effects - this is called struggle.',
 
           'source' => 'Leila Khaled'
-
+          'year' => 2001
        )
 
 
@@ -112,7 +112,7 @@ function printQuote ($quotes) {
     */
 
   if ($displayRandomQuote == "citation") {
-   add it to string
+   echo "citaton . $initiateHTMLString"
   }
 
 
