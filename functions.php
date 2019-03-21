@@ -72,6 +72,7 @@
 
 
 // This is my first attempt @ the getRandomQuote function
+
 function getRandomQuote ($quotes) {
 
 $arrRand = array_rand ($quotes);
@@ -79,46 +80,43 @@ $randomQuote = $quotes[$arrRand];
 return $randomQuote;
 
 }
-
+/*Create a variable that calls the getRandomQuote function, with the quotes
+array as a parameter.*/
 $displayRandomQuote = getRandomQuote ($quotes);
 
-var_dump ($displayRandomQuote);
+//var_dump ($displayRandomQuote);
 
 
 
 
 function printQuote ($quotes) {
 
-  /* create a variable that calls the getRandomQuote() function, passing in the quotes
-  array as an argument */
-
+  /*Create a variable that calls the getRandomQuote function, with the quotes
+  array as a parameter.*/
   $displayRandomQuote = getRandomQuote ($quotes);
 
-  // create a variable that initiates your HTML string
-  // using the template in the project instructions, add the two default quote properties
+//Create a variable that initiates HTML string
+  Global $initiateHTMLString;
+  $initiateHTMLString =
 
-  $initiateHTMLString = '<p class="quote"> [quote here] </p>
-  <p class="source"> [source here] </p>'
+// Use the template in the project instructions & add the 2 default quote props
+  '<p class="quote"> [quote here] </p>
+  <p class="source"> [source here] </p>
 
-  //  <span class="citation"> [citation here] </span>
-  //  <span class="year"> [year here] </span> </p>
+  <span class="citation"> [citation here] </span>
+   <span class="year"> [year here] </span> </p>';
 
-  // if the quote contains a citation value, add it the string
 
-      /*
-    Pseudo Code: If the $displayRandomQuote variable includes a citation
-    add, which means concatanate, citation value to $initiateHTMLString
-    What operator does "include correspond with?"
-    */
-
-  if ($displayRandomQuote == "citation") {
-   echo "citaton . $initiateHTMLString"
+  if (isset (($displayRandomQuote['citation']))
+   {
+   echo  $displayRandomQuote ["citation"];
   }
 
+    if (isset (($displayRandomQuote['year']))
+     {
+     echo $displayRandomQuote ["year"];
+   }
 
-  // if the quote contains a year value, add it the string
+}
 
-
-  // close the string with the necessary closing HTML tags
-  //
-  // display the complete HTML string
+echo $initiateHTMLString;
