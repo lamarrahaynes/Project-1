@@ -96,6 +96,8 @@ function printQuote ($quotes) {
   $displayRandomQuote = getRandomQuote ($quotes);
 
 //Create a variable that initiates HTML string
+  /*the $initiateHTMLString variable is only accesible within the printQuote function.
+  Maybe it should be accesible to all of the code? */
   Global $initiateHTMLString;
   $initiateHTMLString =
 
