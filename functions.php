@@ -84,44 +84,40 @@ $displayRandomQuote = getRandomQuote ($quotes);
 
 var_dump ($displayRandomQuote);
 
-// End of first attempt
-
-
-/* Second attempt @ the getRandomQuote function
-
-function getRandomQuote ($quotes) {
-rand (0,4);
-$randomQuote = rand [$quotes(0,4)];
-return  $randomQuote;
-}
-
-
-echo $showRandQuote = getRandomQuote ($quotes);
-
-//function printQuote ($showRandQuote);
-
-End of second attempt */
-
-
-
-/* Third attempt @ the getRandomQuote function
-
-function getRandomQuote ($quotes) {
-
-    $randquote = $quotes [rand(0,count($quotes)-1)];
-
-}
-
-echo $showRandQuote = getRandomQuote ($quotes);
-End of third attempt */
-
 
 
 
 function printQuote ($quotes) {
 
-$displayRandomQuote = getRandomQuote ($quotes);
+  /* create a variable that calls the getRandomQuote() function, passing in the quotes
+  array as an argument */
+
+  $displayRandomQuote = getRandomQuote ($quotes);
+
+  // create a variable that initiates your HTML string
+  // using the template in the project instructions, add the two default quote properties
+
+  $initiateHTMLString = '<p class="quote"> [quote here] </p>
+  <p class="source"> [source here] </p>'
+
+  //  <span class="citation"> [citation here] </span>
+  //  <span class="year"> [year here] </span> </p> 
+
+  // if the quote contains a citation value, add it the string
+
+      /*
+    Pseudo Code: If the $displayRandomQuote variable includes a citation
+    add, which means concatanate citation value to $initiateHTMLString
+    */
+
+  if ($displayRandomQuote == "citation") {
+   add it to string
+  }
 
 
+  // if the quote contains a year value, add it the string
 
-}
+
+  // close the string with the necessary closing HTML tags
+  //
+  // display the complete HTML string
