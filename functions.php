@@ -108,6 +108,7 @@ function printQuote ($quotes) {
       /*
     Pseudo Code: If the $displayRandomQuote variable includes a citation
     add, which means concatanate, citation value to $initiateHTMLString
+    What operator does "include correspond with?"
     */
 
   if ($displayRandomQuote == "citation") {
