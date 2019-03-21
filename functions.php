@@ -101,13 +101,13 @@ function printQuote ($quotes) {
   <p class="source"> [source here] </p>'
 
   //  <span class="citation"> [citation here] </span>
-  //  <span class="year"> [year here] </span> </p> 
+  //  <span class="year"> [year here] </span> </p>
 
   // if the quote contains a citation value, add it the string
 
       /*
     Pseudo Code: If the $displayRandomQuote variable includes a citation
-    add, which means concatanate citation value to $initiateHTMLString
+    add, which means concatanate, citation value to $initiateHTMLString
     */
 
   if ($displayRandomQuote == "citation") {
