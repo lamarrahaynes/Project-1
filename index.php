@@ -19,7 +19,7 @@
 <!--Calling printQuote function-->
     <?php
      $printingQuotes = printQuote ($quotes);
-      echo $initiateHTMLString;
+      echo $printingQuotes;
 
        ?>
 

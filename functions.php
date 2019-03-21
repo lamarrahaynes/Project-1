@@ -98,12 +98,13 @@ function printQuote ($quotes) {
 //Create a variable that initiates HTML string
   /*the $initiateHTMLString variable is only accesible within the printQuote function.
   Maybe it should be accesible to all of the code? */
+
   Global $initiateHTMLString;
   $initiateHTMLString =
 
 // Use the template in the project instructions & add the 2 default quote props
-  '<p class="quote"> [quote here] </p>
-  <p class="source"> [source here] </p>
+  '<p class="quote"> [quote here] </p> <br>
+  <p class="source"> [source here] </p> <br>
 
   <span class="citation"> [citation here] </span>
    <span class="year"> [year here] </span> </p>';
@@ -120,5 +121,6 @@ function printQuote ($quotes) {
    }
 
 }
-
-echo $initiateHTMLString;
+$printingQuotes = printQuote ($quotes);
+var_dump ($printingQuotes);
+//print $initiateHTMLString;
