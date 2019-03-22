@@ -3,12 +3,12 @@
 
     array (
 
-        'quote' => 'O-P-U-L-E-N-C-E: Opulence! You own everything. Everything
-        is yours.',
+        'quote' => "O-P-U-L-E-N-C-E: Opulence! You own everything. Everything
+        is yours.",
 
-        'source' => 'Junior LaBeija',
+        'source' => "Junior LaBeija",
 
-        'citation' => '<i>Paris is burning</i>',
+        'citation' => "<i>Paris is Burning</i>",
 
         'year' => 1991
       ),
@@ -16,21 +16,9 @@
 
     array (
 
-        'quote' => 'For the master’s tools will never dismantle the master’s
-        house. They may allow us to temporarily beat him at his own game,
-        but they will never enable us to bring about genuine change.
-        Racism and homophobia are real conditions of all our lives in this
-        place and time. I urge each one of us here to reach down into that
-        deep place of knowledge inside herself and touch that terror
-        and loathing of any difference that lives here. See whose face it
-        wears. Then the personal as the political can begin to illuminate
-        all our choices',
+        'quote' => 'Finish him.',
 
-        'source' => 'Audre Lorde',
-
-        'citation' => 'Sister Outsider: Essays and Speeches',
-
-        'year' => 1984
+        'source' => 'Mortal Combat'
 
     ),
 
@@ -48,21 +36,21 @@
 
         array (
 
-          'quote' => 'Our ultimate objective in learning about anything is
-          to try to create and develop a more just society.',
+          'quote' => 'you broke the ocean in half to be here. <br>
+          only to meet nothing that wants you. – immigrant.',
 
-          'source' => 'Yuri Kochiyama',
+          'source' => 'Nayyirah Waheed',
+          'citation' => '<i>Salt</i>',
+          'year' => 2013
         ),
 
     array (
 
-          'quote' => 'Who planted terrorism in our area? Some came and took
-          our land, forced us to leave, forced us to live in camps. I think
-          this is terrorism. Using means to resist this terrorism and stop its
-          effects - this is called struggle.',
+          'quote' => 'Who gone check me <i>boo</i>?',
 
-          'source' => 'Leila Khaled',
-          'year' => 2001
+          'source' => 'Sheree Whitefield',
+          'citation' => '"Real Housewives of Atlanta"'
+
        )
 
 
@@ -82,7 +70,7 @@ return $randomQuote;
 }
 /*Create a variable that calls the getRandomQuote function, with the quotes
 array as a parameter.*/
-$displayRandomQuote = getRandomQuote ($quotes);
+//$displayRandomQuote = getRandomQuote ($quotes);
 
 //var_dump ($displayRandomQuote);
 
@@ -95,40 +83,30 @@ function printQuote ($quotes) {
   array as a parameter.*/
   $displayRandomQuote = getRandomQuote ($quotes);
 
-//Create a variable that initiates HTML string
-  /*the $initiateHTMLString variable is only accesible within the printQuote function.
-  Maybe it should be accesible to all of the code? */
-
-  Global $initiateHTMLString;
   $initiateHTMLString =
 
 // Use the template in the project instructions & add the 2 default quote props
 
-  //Quote
-
-  '<p class="quote"> $displayRandomQuote ["quote"] </p>
-  <p class="source"> $displayRandomQuote ["source"] </p>
-
-  <span class="citation"> $quotes ["citation"] </span>
-   <span class="year"> $quotes ["year"] </span> </p>';
-
+'<p class="quote">' . $displayRandomQuote["quote"] . '</p>
+<p class="source">' . $displayRandomQuote["source"] .
+'<span class="citation">' . $displayRandomQuote["citation"] . '</span>
+<span class="year">' . $displayRandomQuote["year"] .'</span>
+</p>';
 
 
   if (
-    isset (($displayRandomQuote['citation']))
+    isset (($displayRandomQuote["citation"]))
     )
    {
    echo  $displayRandomQuote ["citation"];
   }
 
-    if (isset (($displayRandomQuote['year']))
+    if (isset (($displayRandomQuote["year"]))
     )
      {
      echo $displayRandomQuote ["year"];
    }
 
+   return $initiateHTMLString;
 }
-$printingQuotes = printQuote ($quotes);
-var_dump ($printingQuotes);
-
-//print $initiateHTMLString;
+print $initiateHTMLString;
