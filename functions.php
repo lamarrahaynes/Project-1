@@ -61,7 +61,7 @@
           this is terrorism. Using means to resist this terrorism and stop its
           effects - this is called struggle.',
 
-          'source' => 'Leila Khaled'
+          'source' => 'Leila Khaled',
           'year' => 2001
        )
 
@@ -103,19 +103,26 @@ function printQuote ($quotes) {
   $initiateHTMLString =
 
 // Use the template in the project instructions & add the 2 default quote props
-  '<p class="quote"> [quote here] </p> <br>
-  <p class="source"> [source here] </p> <br>
 
-  <span class="citation"> [citation here] </span>
-   <span class="year"> [year here] </span> </p>';
+  //Quote
+
+  '<p class="quote"> $displayRandomQuote ["quote"] </p>
+  <p class="source"> $displayRandomQuote ["source"] </p>
+
+  <span class="citation"> $quotes ["citation"] </span>
+   <span class="year"> $quotes ["year"] </span> </p>';
 
 
-  if (isset (($displayRandomQuote['citation']))
+
+  if (
+    isset (($displayRandomQuote['citation']))
+    )
    {
    echo  $displayRandomQuote ["citation"];
   }
 
     if (isset (($displayRandomQuote['year']))
+    )
      {
      echo $displayRandomQuote ["year"];
    }
@@ -123,4 +130,5 @@ function printQuote ($quotes) {
 }
 $printingQuotes = printQuote ($quotes);
 var_dump ($printingQuotes);
+
 //print $initiateHTMLString;

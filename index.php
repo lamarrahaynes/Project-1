@@ -20,10 +20,7 @@
     <?php
      $printingQuotes = printQuote ($quotes);
       echo $printingQuotes;
-
        ?>
-
-
   </div>
     <button id="loadQuote" onclick="window.location.reload(true)" >Show another quote</button>
   </div>
