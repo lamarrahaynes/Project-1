@@ -1,6 +1,6 @@
 <?php
   $quotes = array (
-
+//citation and year are showing up above printed quote in browser
     array (
 
         'quote' => "O-P-U-L-E-N-C-E: Opulence! You own everything. Everything
@@ -10,30 +10,25 @@
 
         'citation' => "<i>Paris is Burning</i>",
 
-        'year' => 1991
-      ),
+        'year' => 1991),
 
-
+//Extra comma appearing after source in browser
     array (
 
         'quote' => 'Finish him.',
 
-        'source' => 'Mortal Combat'
+        'source' => 'Mortal Combat'),
 
-    ),
-
-
-
+//Extra comma appearing after source in browser
       array (
 
             'quote' => "When an individual is protesting society's
             refusal to acknowledge his dignity as a human being,
             his very act of protest confers dignity on him.",
 
-            'source' => 'Bayard Rustin'
+            'source' => 'Bayard Rustin'),
 
-          ),
-
+//citation and year are showing up above printed quote in browser
         array (
 
           'quote' => 'you broke the ocean in half to be here. <br>
@@ -41,17 +36,16 @@
 
           'source' => 'Nayyirah Waheed',
           'citation' => '<i>Salt</i>',
-          'year' => 2013
-        ),
+          'year' => 2013),
 
+//Extra comma appearing after citation in browser
+//citation isn showing up above printed quote in browser
     array (
 
           'quote' => 'Who gone check me <i>boo</i>?',
 
           'source' => 'Sheree Whitefield',
-          'citation' => '"Real Housewives of Atlanta"'
-
-       )
+          'citation' => '"Real Housewives of Atlanta"')
 
 
 );
