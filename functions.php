@@ -39,7 +39,7 @@
           'year' => 2013),
 
 //Extra comma appearing after citation in browser
-//citation isn showing up above printed quote in browser
+//citation is showing up above printed quote in browser
     array (
 
           'quote' => 'Who gone check me <i>boo</i>?',
@@ -81,26 +81,28 @@ function printQuote ($quotes) {
 
 // Use the template in the project instructions & add the 2 default quote props
 
-'<p class="quote">' . $displayRandomQuote["quote"] . '</p>
-<p class="source">' . $displayRandomQuote["source"] .
-'<span class="citation">' . $displayRandomQuote["citation"] . '</span>
-<span class="year">' . $displayRandomQuote["year"] .'</span>
-</p>';
+'<p class="quote">' . $displayRandomQuote["quote"] .
+'</p> <p class="source">' . $displayRandomQuote["source"] . ' ' ;
 
-
-  if (
-    isset (($displayRandomQuote["citation"]))
-    )
-   {
-   echo  $displayRandomQuote ["citation"];
-  }
+if (
+  isset (($displayRandomQuote["citation"])) 
+  )
+ {
+ $initiateHTMLString .=  $displayRandomQuote ["citation"];
+}
 
     if (isset (($displayRandomQuote["year"]))
     )
      {
-     echo $displayRandomQuote ["year"];
+     $initiateHTMLString .= $displayRandomQuote ["year"];
    }
 
    return $initiateHTMLString;
+
+   '<span class="citation">' . $displayRandomQuote["citation"]  ;
+    '</span> <span class="year">' . $displayRandomQuote["year"] .'</span>
+   </p>';
+
+
 }
 print $initiateHTMLString;
