@@ -1,6 +1,6 @@
 <?php
   $quotes = array (
-//citation and year are showing up above printed quote in browser
+
     array (
 
         'quote' => "O-P-U-L-E-N-C-E: Opulence! You own everything. Everything
@@ -12,14 +12,13 @@
 
         'year' => 1991),
 
-//Extra comma appearing after source in browser
+
     array (
 
         'quote' => 'Finish him.',
 
         'source' => 'Mortal Combat'),
 
-//Extra comma appearing after source in browser
       array (
 
             'quote' => "When an individual is protesting society's
@@ -85,7 +84,7 @@ function printQuote ($quotes) {
 '</p> <p class="source">' . $displayRandomQuote["source"] . ' ' ;
 
 if (
-  isset (($displayRandomQuote["citation"])) 
+  isset (($displayRandomQuote["citation"]))
   )
  {
  $initiateHTMLString .=  $displayRandomQuote ["citation"];
@@ -99,7 +98,7 @@ if (
 
    return $initiateHTMLString;
 
-   '<span class="citation">' . $displayRandomQuote["citation"]  ;
+   '<span class="citation">' . $displayRandomQuote["citation"] . '</span>'  . ' ' .;
     '</span> <span class="year">' . $displayRandomQuote["year"] .'</span>
    </p>';
 
