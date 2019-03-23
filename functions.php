@@ -1,4 +1,7 @@
 <?php
+//Create multidimensional associative array named quotes
+//Include at least 5 quotes
+
   $quotes = array (
 
     array (
@@ -27,7 +30,6 @@
 
             'source' => 'Bayard Rustin'),
 
-//citation and year are showing up above printed quote in browser
         array (
 
           'quote' => 'you broke the ocean in half to be here. <br>
@@ -37,14 +39,13 @@
           'citation' => '<i>Salt</i>',
           'year' => 2013),
 
-//Extra comma appearing after citation in browser
-//citation is showing up above printed quote in browser
+
     array (
 
           'quote' => 'Who gone check me <i>boo</i>?',
 
           'source' => 'Sheree Whitefield',
-          'citation' => '"Real Housewives of Atlanta"')
+          'citation' => 'Real Housewives of Atlanta')
 
 
 );
@@ -52,28 +53,25 @@
 
 
 
-// This is my first attempt @ the getRandomQuote function
+
+//Create getRandomQuote function. This function will use the quotes array as its parameter.
 
 function getRandomQuote ($quotes) {
-
 $arrRand = array_rand ($quotes);
 $randomQuote = $quotes[$arrRand];
 return $randomQuote;
 
 }
-/*Create a variable that calls the getRandomQuote function, with the quotes
-array as a parameter.*/
-//$displayRandomQuote = getRandomQuote ($quotes);
-
-//var_dump ($displayRandomQuote);
 
 
-
-
+//Create the printQuote function. This will also use the quotes array as its parameter.
 function printQuote ($quotes) {
 
-  /*Create a variable that calls the getRandomQuote function, with the quotes
-  array as a parameter.*/
+/*
+  Create a variable that calls the getRandomQuote function, with the quotes
+  array as a parameter.
+*/
+
   $displayRandomQuote = getRandomQuote ($quotes);
 
   $initiateHTMLString =
@@ -81,27 +79,28 @@ function printQuote ($quotes) {
 // Use the template in the project instructions & add the 2 default quote props
 
 '<p class="quote">' . $displayRandomQuote["quote"] .
-'</p> <p class="source">' . $displayRandomQuote["source"] . ' ' ;
+'</p> <p class="source">' . $displayRandomQuote["source"] ;
+
+// The span elements needs to be nested within the "if" statements.
 
 if (
   isset (($displayRandomQuote["citation"]))
   )
  {
- $initiateHTMLString .=  $displayRandomQuote ["citation"];
+ $initiateHTMLString .= '<span class="citation">' .$displayRandomQuote["citation"].'</span>' ;
 }
 
-    if (isset (($displayRandomQuote["year"]))
+if (isset (($displayRandomQuote["year"]))
     )
-     {
-     $initiateHTMLString .= $displayRandomQuote ["year"];
+    {
+  $initiateHTMLString .= '<span class="year">' . $displayRandomQuote["year"] .'</span> </p>';
    }
 
    return $initiateHTMLString;
-
-   '<span class="citation">' . $displayRandomQuote["citation"] . '</span>'  . ' ' .;
-    '</span> <span class="year">' . $displayRandomQuote["year"] .'</span>
-   </p>';
-
-
 }
+//Remember to display function after returning it or else code will not be printed.
+
 print $initiateHTMLString;
+
+
+?>
